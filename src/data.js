@@ -4,6 +4,7 @@ import img3 from "./static/fashion3.png";
 import shirt from "./static/shirt.jpg";
 import lounge from "./static/lounge.jpg";
 import jacket from "./static/jacket.jpg";
+import tshirt from "./static/tshirt.jpg";
 
 export const sliderItems = [
   {
@@ -44,5 +45,32 @@ export const categories = [
     id: 3,
     img: jacket,
     title: "LIGHT JACKETS",
+  },
+];
+
+export const popularProducts = [
+  {
+    id: 1,
+    img: tshirt,
+  },
+  {
+    id: 2,
+    img: tshirt,
+  },
+  {
+    id: 3,
+    img: tshirt,
+  },
+  {
+    id: 4,
+    img: tshirt,
+  },
+  {
+    id: 5,
+    img: tshirt,
+  },
+  {
+    id: 6,
+    img: tshirt,
   },
 ];
