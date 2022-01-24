@@ -27,21 +27,20 @@ const InputContainer = styled.div`
     display: flex;
     justify-content: space-between;
     border: 1px solid lightgray;
-    border-radius: 2em;
     align-items: center;
 `;
 const Input = styled.input`
     border: none;
-    border-radius: 2em;
     outline: none;
     font-size: 1.5rem;
     text-align: center;
-    flex: 1;
+    flex: 8;
 `;
 const Button = styled.button`
-    padding: .5em 1em;
-    background: none;
-    border: none;
+    background: teal;
+    color: white;
+    flex: 1;
+    cusor: pointer;
 `;
 
 const Newsletter = () => {
@@ -51,7 +50,7 @@ const Newsletter = () => {
       <InputContainer>
         <Input placeholder='Your email' />
         <Button>
-            <AiOutlineSend size='2rem'/>
+            <AiOutlineSend size='2rem' style={{marginLeft: '10px'}}/>
         </Button>
       </InputContainer>
   </Container>;

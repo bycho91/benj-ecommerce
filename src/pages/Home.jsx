@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Announcements, Slider, Categories, ProductList, Newsletter } from "../components";
+import { Navbar, Announcements, Slider, Categories, ProductList, Newsletter, Footer } from "../components";
 const Home = () => {
   return (
     <div>
@@ -9,6 +9,7 @@ const Home = () => {
       <Categories />
       <ProductList />
       <Newsletter />
+      <Footer />
     </div>
   );
 };
