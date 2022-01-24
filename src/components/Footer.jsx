@@ -5,6 +5,7 @@ import {HiOutlineLocationMarker, HiOutlinePhone, HiOutlineMail} from 'react-icon
 
 const Container = styled.div`
     display: flex;
+    height: 40vh;
 `;
 
 const Left = styled.div`
