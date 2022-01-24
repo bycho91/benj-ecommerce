@@ -6,7 +6,6 @@ import { FiMail, FiShoppingCart } from "react-icons/fi";
 
 const Container = styled.div`
   height: 60px;
-  margin-bottom: 1em;
 `;
 
 const Wrapper = styled.div`
