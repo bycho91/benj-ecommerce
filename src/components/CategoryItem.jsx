@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
-    flex-basis: 100%;
+    flex: 1;
+    min-width: 400px;
     height: 100vh;
     position: relative;
 `;

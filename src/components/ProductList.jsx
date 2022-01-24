@@ -7,7 +7,6 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  gap: 1em;
   flex-wrap: wrap;
 `;
 
