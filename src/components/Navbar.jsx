@@ -9,8 +9,14 @@ import { Link } from "react-router-dom";
 const Container = styled.div`
   height: 60px;
 
+
+
   @media (max-width: 420px) {
     height: 50px;
+
+    a {
+      font-size: 10px;
+    }
   }
 `;
 
@@ -59,6 +65,7 @@ const Input = styled.input`
 
   @media (max-width: 420px) {
     width: 50px;
+    font-size: .8rem;
   }
 `;
 
@@ -74,7 +81,7 @@ const Logo = styled.h1`
   letter-spacing: 0.3em;
 
   @media (max-width: 420px) {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 `;
 
@@ -94,10 +101,6 @@ const Right = styled.div`
 
 const MenuItem = styled.div`
   cursor: pointer;
-
-  @media (max-width: 420px) {
-    font-size: 12px;
-  }
 `;
 
 const Navbar = () => {
