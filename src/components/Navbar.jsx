@@ -4,6 +4,7 @@ import { BsSearch } from "react-icons/bs";
 import { Badge } from "@material-ui/core";
 import { FiMail, FiShoppingCart } from "react-icons/fi";
 import { device } from "../responsive";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   height: 60px;
@@ -114,11 +115,17 @@ const Navbar = () => {
           <Logo>BENJ</Logo>
         </Center>
         <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
+          <MenuItem>
+            <Link to="/register">REGISTER</Link>
+          </MenuItem>
+          <MenuItem>
+            <Link to="/login">SIGN IN</Link>
+          </MenuItem>
           <MenuItem>
             <Badge badgeContent={2} color="primary">
-              <FiShoppingCart size="1.3em" />
+              <Link to="/cart">
+                <FiShoppingCart size="1.3em" />
+              </Link>
             </Badge>
           </MenuItem>
         </Right>
