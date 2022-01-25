@@ -14,11 +14,12 @@ import {
 
 const Container = styled.div`
   display: flex;
-  height: 40vh;
-  align-items: center;
-  justify-content: center;
-  gap: 5rem;
   background-color: whitesmoke;
+
+  @media (max-width: 420px) {
+    flex-direction: column;
+    text-align: center;
+  }
 `;
 
 const Left = styled.div`
@@ -54,6 +55,10 @@ const SocialIcon = styled.div`
 const Center = styled.div`
   flex: 1;
   padding: 20px;
+
+  @media (max-width: 420px) {
+    display: none;
+  }
 `;
 
 const Title = styled.h3`
@@ -92,7 +97,7 @@ const Footer = () => {
   return (
     <Container>
       <Left>
-        <Logo>BENJ</Logo>
+        <Logo>BENJ&copy;</Logo>
         <Description>
           We sell nothing but the best. Get your swag on for less.
         </Description>

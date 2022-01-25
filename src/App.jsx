@@ -11,12 +11,12 @@ import {
 const App = () => {
   return (
     <div>
-      {/* <HomePage /> */}
+      <HomePage />
       {/* <ProductListPage /> */}
       {/* <ProductPage /> */}
       {/* <RegisterPage /> */}
       {/* <LoginPage /> */}
-      <CartPage />
+      {/* <CartPage /> */}
     </div>
   );
 };

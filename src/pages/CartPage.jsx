@@ -8,6 +8,10 @@ const Container = styled.div``;
 
 const Wrapper = styled.div`
   padding: 20px;
+
+  @media (max-width: 420px) {
+    padding: 10px;
+  }
 `;
 
 const Title = styled.h1`
@@ -35,6 +39,10 @@ const TopButton = styled.button`
 const TopTexts = styled.div`
   display: flex;
   gap: 2em;
+
+  @media (max-width: 420px) {
+    display: none;
+  }
 `;
 
 const TopText = styled.span`
@@ -46,18 +54,23 @@ const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 20px;
+
+  @media (max-width: 420px) {
+    flex-direction: column;
+  }
 `;
 const Info = styled.div`
   flex: 3;
-`;
-const Summary = styled.div`
-  flex: 1;
 `;
 
 const Product = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 20px 0;
+
+  @media (max-width: 420px) {
+    flex-direction: column;
+  }
 `;
 
 const ProductDetail = styled.div`
@@ -66,7 +79,7 @@ const ProductDetail = styled.div`
 `;
 
 const Image = styled.img`
-  width: 200px;
+  width: 150px;
   height: 150px;
   object-fit: cover;
 `;
@@ -104,12 +117,24 @@ const ProductAmountContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 0.5em;
+
+  @media (max-width: 420px) {
+    margin-top: 1.5rem;
+  }
 `;
 const ProductQty = styled.div`
   font-size: 1.2rem;
+  margin: 5px;
+  @media (max-width: 420px) {
+    margin: 5px 15px;
+  }
 `;
 const ProductPrice = styled.div`
   font-size: 1.5rem;
+
+  @media (max-width: 420px) {
+    margin-bottom: 20px;
+  }
 `;
 
 const Hr = styled.hr`
@@ -118,11 +143,39 @@ const Hr = styled.hr`
   height: 1px;
 `;
 
-const SummaryTitle = styled.h1``;
-const SummaryItem = styled.div``;
-const SummaryItemText = styled.span``;
-const SummaryItemPrice = styled.span``;
-const Button = styled.button``;
+const Summary = styled.div`
+  flex: 1;
+  border: 0.5px solid whitesmoke;
+  border-radius: 10px;
+  padding: 20px;
+  height: 50vh;
+`;
+
+const SummaryTitle = styled.h1`
+  font-weight: 200;
+  font-size: 1.5rem;
+`;
+
+const SummaryItem = styled.div`
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  font-weight: ${(props) => props.type === "total" && "800"};
+`;
+const SummaryItemText = styled.span`
+  font-size: ${(props) => props.type === "total" && "1.5rem"};
+`;
+const SummaryItemPrice = styled.span`
+  font-size: ${(props) => props.type === "total" && "1.5rem"};
+`;
+const Button = styled.button`
+  width: 100%;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  border: none;
+`;
 
 const CartPage = () => {
   return (
@@ -238,9 +291,9 @@ const CartPage = () => {
               <SummaryItemText>Shipping Discount</SummaryItemText>
               <SummaryItemPrice>$-15.23</SummaryItemPrice>
             </SummaryItem>
-            <SummaryItem>
+            <SummaryItem type="total">
               <SummaryItemText type="total">Total</SummaryItemText>
-              <SummaryItemPrice>$1000</SummaryItemPrice>
+              <SummaryItemPrice type="total">$1000</SummaryItemPrice>
             </SummaryItem>
             <Button>CHECKOUT NOW</Button>
           </Summary>

@@ -3,9 +3,14 @@ import styled from "styled-components";
 import { BsSearch } from "react-icons/bs";
 import { Badge } from "@material-ui/core";
 import { FiMail, FiShoppingCart } from "react-icons/fi";
+import { device } from "../responsive";
 
 const Container = styled.div`
   height: 60px;
+
+  @media (max-width: 420px) {
+    height: 50px;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -13,6 +18,10 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 420px) {
+    padding: 10px;
+  }
 `;
 
 // LEFT
@@ -26,6 +35,10 @@ const Left = styled.div`
 const Language = styled.span`
   font-size: 1rem;
   cursor: pointer;
+
+  @media (max-width: 420px) {
+    display: none;
+  }
 `;
 
 const SearchContainer = styled.div`
@@ -42,6 +55,10 @@ const Input = styled.input`
   &:focus {
     outline: none;
   }
+
+  @media (max-width: 420px) {
+    width: 50px;
+  }
 `;
 
 // CENTER
@@ -54,6 +71,10 @@ const Logo = styled.h1`
   font-weight: 800;
   font-size: 1.8rem;
   letter-spacing: 0.3em;
+
+  @media (max-width: 420px) {
+    font-size: 1.2rem;
+  }
 `;
 
 // RIGHT
@@ -63,10 +84,19 @@ const Right = styled.div`
   justify-content: flex-end;
   align-items: center;
   gap: 1em;
+
+  @media (max-width: 420px) {
+    gap: 0.5em;
+    justify-content: flex-end;
+  }
 `;
 
 const MenuItem = styled.div`
   cursor: pointer;
+
+  @media (max-width: 420px) {
+    font-size: 12px;
+  }
 `;
 
 const Navbar = () => {
@@ -76,7 +106,7 @@ const Navbar = () => {
         <Left>
           <Language>EN</Language>
           <SearchContainer>
-            <Input />
+            <Input placeholder="search" />
             <BsSearch style={{ color: "gray", fontSize: "1em" }} />
           </SearchContainer>
         </Left>

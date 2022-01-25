@@ -1,59 +1,68 @@
-import React from 'react';
-import styled from 'styled-components';
-import {AiOutlineSend} from 'react-icons/ai';
+import React from "react";
+import styled from "styled-components";
+import { AiOutlineSend } from "react-icons/ai";
 
 const Container = styled.div`
-    height: 60vh;
-    background-color: #fcf5f5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 2rem;
+  height: 60vh;
+  background-color: #fcf5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
 `;
 const Title = styled.h1`
-    font-size: 5rem;
+  font-size: 5rem;
 `;
 const Description = styled.div`
-    font-size: 2rem;
-    color: gray;
+  font-size: 2rem;
+  color: gray;
+
+  @media (max-width: 420px) {
+    text-align: center;
+  }
 `;
 const InputContainer = styled.div`
-    width: 40%;
-    height: 40px;
-    max-width: 1000px;
-    min-width: 400px;
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid lightgray;
-    align-items: center;
+  width: 40%;
+  height: 40px;
+  max-width: 1000px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid lightgray;
+  align-items: center;
+
+  @media (max-width: 420px) {
+    width: 80%;
+  }
 `;
 const Input = styled.input`
-    border: none;
-    outline: none;
-    font-size: 1.5rem;
-    text-align: center;
-    flex: 8;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  text-align: center;
+  flex: 8;
 `;
 const Button = styled.button`
-    background: teal;
-    color: white;
-    flex: 1;
-    cusor: pointer;
+  background: teal;
+  color: white;
+  flex: 1;
+  cusor: pointer;
 `;
 
 const Newsletter = () => {
-  return <Container>
+  return (
+    <Container>
       <Title>Newsletter</Title>
       <Description>Get the latest on your favorite products!</Description>
       <InputContainer>
-        <Input placeholder='Your email' />
+        <Input placeholder="Your email" />
         <Button>
-            <AiOutlineSend size='2rem' style={{marginLeft: '10px'}}/>
+          <AiOutlineSend size="2rem" style={{ marginLeft: "10px" }} />
         </Button>
       </InputContainer>
-  </Container>;
+    </Container>
+  );
 };
 
 export default Newsletter;

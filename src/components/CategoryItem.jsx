@@ -1,52 +1,58 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Container = styled.div`
-    flex: 1;
-    min-width: 400px;
-    height: 100vh;
-    position: relative;
+  flex: 1;
+  min-width: 400px;
+  height: 100vh;
+  position: relative;
 `;
 const Image = styled.img`
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top left;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+
+  @media (max-width: 420px) {
+    height: 30vh;
+  }
 `;
 const Info = styled.div`
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 `;
 const Title = styled.h1`
-    font-size: 3rem;
-    font-weight: bold;
-    color: white;
-    mix-blend-mode: difference;
-    margin-bottom: .5em;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  mix-blend-mode: difference;
+  margin-bottom: 0.5em;
 `;
 const Button = styled.button`
-    background: white;
-    border: none;
-    color: gray;
-    cursor: pointer;
-    padding: 1em 2em;
-    font-weight: 600;
+  background: white;
+  border: none;
+  color: gray;
+  cursor: pointer;
+  padding: 1em 2em;
+  font-weight: 600;
 `;
 
-const CategoryItem = ({item}) => {
-  return <Container>
+const CategoryItem = ({ item }) => {
+  return (
+    <Container>
       <Image src={item.img} />
       <Info>
-          <Title>{item.title}</Title>
-          <Button>SHOP NOW</Button>
+        <Title>{item.title}</Title>
+        <Button>SHOP NOW</Button>
       </Info>
-  </Container>;
+    </Container>
+  );
 };
 
 export default CategoryItem;

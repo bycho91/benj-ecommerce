@@ -8,6 +8,12 @@ const Wrapper = styled.div`
   padding: 50px;
   display: flex;
   gap: 3em;
+
+  @media (max-width: 420px) {
+    flex-direction: column;
+    gap: 0;
+    padding: 15px;
+  }
 `;
 const ImageContainer = styled.div`
   flex: 1;
@@ -17,6 +23,10 @@ const Image = styled.img`
   width: 100%;
   height: 90vh;
   object-fit: cover;
+
+  @media (max-width: 420px) {
+    height: 30vh;
+  }
 `;
 
 const Title = styled.h1`
@@ -35,6 +45,10 @@ const Price = styled.span`
 
 const InfoContainer = styled.div`
   flex: 1;
+
+  @media (max-width: 420px) {
+    padding: 10px;
+  }
 `;
 
 const FilterContainer = styled.div`
@@ -42,6 +56,10 @@ const FilterContainer = styled.div`
   margin: 30px 0;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 420px) {
+    width: 100%;
+  }
 `;
 
 const Filter = styled.div`
@@ -75,6 +93,10 @@ const AddContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 50%;
+
+  @media (max-width: 420px) {
+    width: 100%;
+  }
 `;
 
 const AmountContainer = styled.div`

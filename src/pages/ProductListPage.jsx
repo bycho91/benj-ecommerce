@@ -18,11 +18,15 @@ const Title = styled.h1`
 const FilterContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
 `;
 
 const Filter = styled.div`
   margin: 20px;
+  @media (max-width: 420px) {
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const FilterText = styled.span`
@@ -33,6 +37,9 @@ const FilterText = styled.span`
 const Select = styled.select`
   margin-left: 1em;
   padding: 0.5em;
+  @media (max-width: 420px) {
+    margin: 10px 0;
+  }
 `;
 
 const Option = styled.option``;
@@ -42,7 +49,7 @@ const ProductList = () => {
     <Container>
       <Navbar />
       <Announcements />
-      <Title>Dresses</Title>
+      <Title>Products</Title>
       <FilterContainer>
         <Filter>
           <FilterText>Filter Products:</FilterText>

@@ -21,6 +21,9 @@ const Wrapper = styled.div`
   padding: 20px;
   background-color: white;
   border-radius: 10px;
+  @media (max-width: 420px) {
+    width: 75%;
+  }
 `;
 
 const Form = styled.form`
