@@ -1,10 +1,22 @@
 import React from "react";
-import { Home } from "./pages";
+import {
+  HomePage,
+  ProductListPage,
+  ProductPage,
+  RegisterPage,
+  LoginPage,
+  CartPage,
+} from "./pages";
 
 const App = () => {
   return (
     <div>
-      <Home />
+      {/* <HomePage /> */}
+      {/* <ProductListPage /> */}
+      {/* <ProductPage /> */}
+      {/* <RegisterPage /> */}
+      {/* <LoginPage /> */}
+      <CartPage />
     </div>
   );
 };
